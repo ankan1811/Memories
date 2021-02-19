@@ -31,7 +31,7 @@ const Form = ({ currentId, setCurrentId }) => {
     //Look we imported CreatePost from actions
     e.preventDefault(); //not to get the referesh iun the browser
 
-    if (currentId === 0) {
+    if (currentId === 0) { //For creating we do not nedd an id because we will just add the new id but for updating we need the id of the post
       dispatch(createPost(postData));
       clear();
     } else {
