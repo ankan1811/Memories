@@ -41,9 +41,9 @@ export const createPost = async (req, res) => {
     }
 }
 
-export const updatePost = async (req, res) => {
+export const updatePost = async (req, res) => { //request will be made to localhost:5000/posts/:id
     const { id } = req.params;//extract id
-    const { title, message, creator, selectedFile, tags } = req.body;//We are receiving the data fot the updates from req.body
+    const { title, message, creator, selectedFile, tags } = req.body;//We are receiving the data for the updates from req.body
     //that post will be sent from the frontend
 
     if (!mongoose.Types.ObjectId.isValid(id)) return res.status(404).send(`No post with id: ${id}`);
@@ -51,9 +51,9 @@ export const updatePost = async (req, res) => {
 
     const updatedPost = { creator, title, message, tags, selectedFile, _id: id };
 
-    await PostMessage.findByIdAndUpdate(id, updatedPost, { new: true });
+    await PostMessage.findByIdAndUpdate(id, updatedPost, { new: true });//new=true ensures that we actually receive the updated version of the post
 
-    res.json(updatedPost);
+    res.json(updatedPost);//updated post will be possible in json format
 }
 
 export const deletePost = async (req, res) => {
