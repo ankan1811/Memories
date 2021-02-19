@@ -35,6 +35,7 @@ const Form = ({ currentId, setCurrentId }) => {
       dispatch(createPost(postData));
       clear();
     } else {
+      //Creating a memory will change to editing a memory on clicking the edit button
       dispatch(updatePost(currentId, postData));
       clear();
     }
