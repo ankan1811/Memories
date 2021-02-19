@@ -1,1 +1,8 @@
 
+Action creator is a function that returns an action. redux uses async and await as asynchronous. payload is the entire data ,in this case ,posts. Using redux thunk instead of returning the action we dispatch the action.
+1.create the redux store in index.js
+2.In app.js get the useDispatch hook and dispatch getPosts action in useEffect. Initialkly useEffect will be the component that mounts but later on it will be the component that update.
+3.In actions /post.js This file contains details of all the actions which will be exprted and used somewhere else
+4.In reducers/index.js mention that the reducer is posts .In actions/posts.js we dispatch payload as data (getPosts) and that data is the post which is fetched from api.
+5.In reducers/posts.js it consists of the switch case actionss i.e. which actions are going to be performed in which case
+6.In components/posts/posts.js in useSelector i.e. why state.posts since posts was exported in reducers/index.js We retrieve the data from within our components i.e. we fetch the data from the global redux store using useSelector
