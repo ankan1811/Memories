@@ -15,7 +15,8 @@ const App = () => {
 
   useEffect(() => {//component that update
     dispatch(getPosts()); //The best way to dispatch an action
-  }, [currentId, dispatch]);
+  }, [currentId, dispatch]); //When we submit a form in form.js we also change the current id to null again 
+  //and as soon as  we  change the current id in app the app will dispoatch to getPost action (defined)
 
   return ( // Typography Used for h2 lines 
     <Container maxWidth="lg">
