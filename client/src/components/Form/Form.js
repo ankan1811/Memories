@@ -19,13 +19,13 @@ const Form = ({ currentId, setCurrentId }) => { //we are accepting them as props
   const classes = useStyles();
 
   useEffect(() => {
-    if (post) setPostData(post); //To populate the values of the form. when we click on the edit button all infomation will come onto the form to be able to edit
+    if (post) setPostData(post); //To populate the values of the form. when we click on the edit button all information will come onto the form to be able to edit
     //Just the final updated state
   }, [post]); //post is the dependency array when it changes from nothing to the actual post we want to run this useEffect
 
-  const clear = () => {
+  const clear = () => { //once form is submitted we want to clear all the fields
     setCurrentId(0);
-    setPostData({ creator: '', title: '', message: '', tags: '', selectedFile: '' });
+    setPostData({ creator: '', title: '', message: '', tags: '', selectedFile: '' });//simply update the state
   };
 
   //The form will send a post request to our backend application then the backend coimmunicated it to our database
@@ -43,14 +43,15 @@ const Form = ({ currentId, setCurrentId }) => { //we are accepting them as props
       //if we have a current id i.e. it is not null or 0 we will update the post
       //Creating a memory will change to editing a memory on clicking the edit button and then we need to pass over the id of this specific post 
       dispatch(updatePost(currentId, postData));
-      clear();
+      clear(); //After submitting the form all fields will be cleared
     }
   };
 
   return ( // paper,root and form are present in styles.js  We need to have multiple classes so use dollar symbol below inside quotes
     <Paper className={classes.paper}>
       <form autoComplete="off" noValidate className={`${classes.root} ${classes.form}`} onSubmit={handleSubmit}>
-        <Typography variant="h6">{currentId ? `Editing "${post.title}"` : 'Creating a Memory'}</Typography>
+        <Typography variant="h6">{currentId ? `Editing "${post.title}"` : 'Creating a Memory'}</Typography> //If current id exists that is we are updating the post
+  // then change creating a post to editing a post 
         <TextField name="creator"
           variant="outlined"
           label="Creator"
