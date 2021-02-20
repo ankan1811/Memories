@@ -1,6 +1,7 @@
 # Memories 
 ## Mastering MERN stack by building projects. 
-### This project made the concept of MERN stack crystal clear to me
+### This project made the concept of MERN stack crystal clear to me.
+#### I have also added the detailed explanation of the entire code.
 
 # Memories
 
