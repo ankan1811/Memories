@@ -9,7 +9,7 @@ import { useDispatch } from 'react-redux';
 import { likePost, deletePost } from '../../../actions/posts';
 import useStyles from './styles';
 
-const Post = ({ post, setCurrentId }) => { //post represent the props
+const Post = ({ post, setCurrentId }) => { //post represent the props and accept the setCurrenId prop
   const dispatch = useDispatch();
   const classes = useStyles();
 
@@ -23,6 +23,7 @@ const Post = ({ post, setCurrentId }) => { //post represent the props
       </div>
       <div className={classes.overlay2}>
         <Button style={{ color: 'white' }} size="small" onClick={() => setCurrentId(post._id)}>
+          //In post.js onclick we will call that setCurrentId 
           <MoreHorizIcon fontSize="default" /> //Edit Button has an icon of MoreHorizIcon
           </Button>
       </div>
