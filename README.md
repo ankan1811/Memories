@@ -9,7 +9,7 @@
 ![](client/picture2.png)
 
 
-![](client/picture1.png)
+![](client/picture.png)
 
 
 
