@@ -29,10 +29,13 @@ const App = () => {
             <Grid item xs={12} sm={7}>
               <Posts setCurrentId={setCurrentId} /> 
     //setter methods for id
+    //Without redux we have to bring it all the way to app.js and send it to all the components
+   
     //We have to share and keep track of that state of current id between the post and the form and app is the only parent component that is parent to both post and form
             </Grid>
             <Grid item xs={12} sm={4}>
-              <Form currentId={currentId} setCurrentId={setCurrentId} />
+              <Form currentId={currentId} setCurrentId={setCurrentId} /> 
+    //we pass currentId to the form and also the setter method setCurrentId
             </Grid>
           </Grid>
         </Container>
