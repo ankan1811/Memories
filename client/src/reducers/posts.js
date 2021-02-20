@@ -10,7 +10,9 @@ export default (posts = [], action) => { //posts will be an empty array by defau
       return [...posts, action.payload];//we have an array of posts So spread all the posts already present 
     // and then add the new post which is action.payload
     case UPDATE:
-      return posts.map((post) => (post._id === action.payload._id ? action.payload : post));
+      return posts.map((post) => (post._id === action.payload._id ? action.payload : post)); //action.payload is the updated post so we will loop through the posts if id
+      //matches then return the updtaed post else return the post as it was without any updates
+      //map returns an array 
     case DELETE:
       return posts.filter((post) => post._id !== action.payload);
     default:
