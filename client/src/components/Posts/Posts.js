@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux';
 import Post from './Post/Post';//Posts.js will use post.js
 import useStyles from './styles';
 
-const Posts = ({ setCurrentId }) => {
+const Posts = ({ setCurrentId }) => { //accept as props
   //We retrieve the data from within our components i.e. we fetch the data from the global redux store
   const posts = useSelector((state) => state.posts); //state=whole global redux store It is state.posts 
   //because in reducers/index.js we have exported posts
@@ -21,6 +21,7 @@ const Posts = ({ setCurrentId }) => {
             <Post post={post} //We are mapping with our real post now not generic post
               //We will send individual value of post to each post component
               setCurrentId={setCurrentId} />
+    //props drilling
           </Grid>
         ))}
       </Grid>
