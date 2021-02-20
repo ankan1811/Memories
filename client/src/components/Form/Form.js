@@ -29,7 +29,8 @@ const Form = ({ currentId, setCurrentId }) => {
   const handleSubmit = async (e) => {
     //We will dispatch the action of CREATE i.e createPost only when user has submitted the form 
     //Look we imported CreatePost from actions
-    e.preventDefault(); //not to get the referesh iun the browser
+    e.preventDefault(); //not to get the referesh iun the browser.
+    //The preventDefault() method cancels the event if it is cancelable, meaning that the default action that belongs to the event will not occur.
 
     if (currentId === 0) { //For creating we do not nedd an id because we will just add the new id but for updating we need the id of the post
       dispatch(createPost(postData));
