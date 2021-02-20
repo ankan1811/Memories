@@ -32,11 +32,11 @@ const Form = ({ currentId, setCurrentId }) => {
     e.preventDefault(); //not to get the referesh iun the browser.
     //The preventDefault() method cancels the event if it is cancelable, meaning that the default action that belongs to the event will not occur.
 
-    if (currentId === 0) { //For creating we do not nedd an id because we will just add the new id but for updating we need the id of the post
+    if (currentId === 0) { //For creating we do not need an id because we will just add the new id but for updating we need the id of the post
       dispatch(createPost(postData));
       clear();
     } else {
-      //Creating a memory will change to editing a memory on clicking the edit button
+      //Creating a memory will change to editing a memory on clicking the edit button and then we need to pass over the id of this specific post 
       dispatch(updatePost(currentId, postData));
       clear();
     }
