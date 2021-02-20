@@ -7,6 +7,7 @@ import useStyles from './styles';
 
 const Posts = ({ setCurrentId }) => { //accept as props
   //We retrieve the data from within our components i.e. we fetch the data from the global redux store
+  //We fetch the posts
   const posts = useSelector((state) => state.posts); //state=whole global redux store It is state.posts 
   //because in reducers/index.js we have exported posts
   const classes = useStyles();
