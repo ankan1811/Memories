@@ -6,7 +6,7 @@ import FileBase from 'react-file-base64';
 import useStyles from './styles';
 import { createPost, updatePost } from '../../actions/posts';
 
-const Form = ({ currentId, setCurrentId }) => {
+const Form = ({ currentId, setCurrentId }) => { //we are accepting them as props here
   const [postData, setPostData] = useState({ creator: '', title: '', message: '', tags: '', selectedFile: '' });
   //This hook is only used in this file only because here we are only concerned with the data present in the post We are not performing any action
   //At the beginning everything will be an empty string.
