@@ -35,7 +35,7 @@ export const updatePost = (id, post) => async (dispatch) => {
 
 export const likePost = (id) => async (dispatch) => {
   try {
-    const { data } = await api.likePost(id);
+    const { data } = await api.likePost(id);//we get data object from backend
 
     dispatch({ type: LIKE, payload: data });
   } catch (error) {
