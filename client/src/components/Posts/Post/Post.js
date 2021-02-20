@@ -2,7 +2,7 @@ import React from 'react';
 import { Card, CardActions, CardContent, CardMedia, Button, Typography } from '@material-ui/core/';
 import ThumbUpAltIcon from '@material-ui/icons/ThumbUpAlt'; //Like button
 import DeleteIcon from '@material-ui/icons/Delete'; //delete button
-import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
+import MoreHorizIcon from '@material-ui/icons/MoreHoriz'; //material icons are not a part of material-ui/core install them separately
 import moment from 'moment';
 import { useDispatch } from 'react-redux';
 
