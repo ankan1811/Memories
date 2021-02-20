@@ -36,6 +36,7 @@ const Form = ({ currentId, setCurrentId }) => { //we are accepting them as props
       dispatch(createPost(postData));
       clear();
     } else {
+      //if we have a current id i.e. it is not null or 0 we will update the post
       //Creating a memory will change to editing a memory on clicking the edit button and then we need to pass over the id of this specific post 
       dispatch(updatePost(currentId, postData));
       clear();
