@@ -28,6 +28,7 @@ const App = () => {
           <Grid container justify="space-between" alignItems="stretch" spacing={3}>
             <Grid item xs={12} sm={7}>
               <Posts setCurrentId={setCurrentId} /> 
+    //setter methods for id
     //We have to share and keep track of that state of current id between the post and the form and app is the only parent component that is parent to both post and form
             </Grid>
             <Grid item xs={12} sm={4}>
