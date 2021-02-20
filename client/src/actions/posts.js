@@ -15,7 +15,7 @@ export const getPosts = () => async (dispatch) => { //Action creator is a functi
 
 export const createPost = (post) => async (dispatch) => {
   try {
-    const { data } = await api.createPost(post);
+    const { data } = await api.createPost(post); .//get the data from the response from api. Post API request to our backend server
 
     dispatch({ type: CREATE, payload: data });
   } catch (error) {
@@ -35,7 +35,7 @@ export const updatePost = (id, post) => async (dispatch) => {
 
 export const likePost = (id) => async (dispatch) => {
   try {
-    const { data } = await api.likePost(id);//we get data object from backend
+    const { data } = await api.likePost(id);
 
     dispatch({ type: LIKE, payload: data });
   } catch (error) {
