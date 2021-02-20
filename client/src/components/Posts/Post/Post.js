@@ -23,7 +23,7 @@ const Post = ({ post, setCurrentId }) => { //post represent the props
       </div>
       <div className={classes.overlay2}>
         <Button style={{ color: 'white' }} size="small" onClick={() => setCurrentId(post._id)}>
-          <MoreHorizIcon fontSize="default" /> //Button has an icon of MoreHorizIcon
+          <MoreHorizIcon fontSize="default" /> //Edit Button has an icon of MoreHorizIcon
           </Button>
       </div>
       <div className={classes.details}>
