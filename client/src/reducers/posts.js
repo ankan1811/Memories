@@ -14,7 +14,7 @@ export default (posts = [], action) => { //posts will be an empty array by defau
       //matches then return the updtaed post else return the post as it was without any updates
       //map returns an array 
     case DELETE:
-      return posts.filter((post) => post._id !== action.payload);
+      return posts.filter((post) => post._id !== action.payload); //return all the posts but filter out the deleted post i.e. the post whose id = action.payload
     default:
       return posts;
   }
