@@ -45,7 +45,7 @@ export const likePost = (id) => async (dispatch) => {
 
 export const deletePost = (id) => async (dispatch) => {
   try {
-    await api.deletePost(id);
+    await api.deletePost(id);//We are not interested in the returned data here >just delete it!!!
 
     dispatch({ type: DELETE, payload: id });
   } catch (error) {
