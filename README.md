@@ -1,7 +1,7 @@
 # Memories 
 ## Mastering MERN stack by building projects. 
 ### This project made the concept of MERN stack crystal clear to me.
-# Most Scalable code ever!!!
+# Most Scalable and cleanest code ever!!!
 #### I have also added the detailed explanation of the entire code -Ankan Pal
 
 # Memories
