@@ -12,6 +12,8 @@ const Form = ({ currentId, setCurrentId }) => { //we are accepting them as props
   //At the beginning everything will be an empty string.
   const post = useSelector((state) => (currentId ? state.posts.find((message) => message._id === currentId) : null));
   //We only want to fetch the new updated post so that we get all the information about it.
+  //Same thing in case of the post we want to update by clicking the edit button as in that case too we will get the id as soon AS SOON AS WE CLICK THE EDIT BUTTON and 
+  //hence we will get the information here too and post will not be null and hence useEffect will run.
   //if we have a currentid(i.e. not null) we will loop over state.posts and we want to find a post that has the same id as our current id else
   //if we do not have current id return null
 
