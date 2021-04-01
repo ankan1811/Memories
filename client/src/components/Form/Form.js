@@ -11,15 +11,18 @@ const Form = ({ currentId, setCurrentId }) => { //we are accepting them as props
   //This hook is only used in this file only because here we are only concerned with the data present in the post We are not performing any action
   //At the beginning everything will be an empty string.
   const post = useSelector((state) => (currentId ? state.posts.find((message) => message._id === currentId) : null));
-  //We only want to fetch the updated post.
+  //We only want to fetch the new updated post.
   //if we have a currentid(i.e. not null) we will loop over state.posts and we want to find a post that has the same id as our current id else
   //if we do not have current id return null
 
   const dispatch = useDispatch();
   const classes = useStyles();
 
-  useEffect(() => {
-    if (post) setPostData(post); //To populate the values of the form. when we click on the edit button all information will come onto the form to be able to edit
+  //In case of update when we click on edit button next step is to update the fields of the form with the values we want to update.
+  useEffect(() => { //If the updated post exists
+    if (post) setPostData(post); //To populate the values of the post into the form. when we click on the edit button 
+    //all information will come onto
+    // the form to be able to edit once again.
     //Just the final updated state
   }, [post]); //post is the dependency array when it changes from nothing to the actual post we want to run this useEffect
 
@@ -51,7 +54,7 @@ const Form = ({ currentId, setCurrentId }) => { //we are accepting them as props
     <Paper className={classes.paper}>
       <form autoComplete="off" noValidate className={`${classes.root} ${classes.form}`} onSubmit={handleSubmit}>
         <Typography variant="h6">{currentId ? `Editing "${post.title}"` : 'Creating a Memory'}</Typography> //If current id exists that is we are updating the post
-  // then change creating a post to editing a post 
+  // then change creating a post to editing a post
         <TextField name="creator"
           variant="outlined"
           label="Creator"
