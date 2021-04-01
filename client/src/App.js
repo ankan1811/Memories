@@ -45,4 +45,6 @@ const App = () => {
   );
 };
 
-export default App;
+export default App;//In prehooks era redux was hard 
+//We had to write some crazy syntax here
+
