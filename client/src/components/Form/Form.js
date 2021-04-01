@@ -18,7 +18,7 @@ const Form = ({ currentId, setCurrentId }) => { //we are accepting them as props
   const dispatch = useDispatch();
   const classes = useStyles();
 
-  //In case of update when we click on edit button next step is to update the fields of the form with the values we want to update.
+  // when we click on edit button we have to update the fields of the form with the values already present which we now want to update.
   useEffect(() => { //If the updated post exists
     if (post) setPostData(post); //To populate the values of the post into the form. when we click on the edit button 
     //all information will come onto
