@@ -1,6 +1,6 @@
 import React from 'react';
 import { Grid, CircularProgress } from '@material-ui/core';
-import { useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';//we fetch the data from the global redux store using useSelector
 
 import Post from './Post/Post';//Posts.js will use post.js
 import useStyles from './styles';
